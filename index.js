@@ -1,3 +1,9 @@
+function smoothScroll(id) {
+  event.preventDefault();
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 const canvas = document.getElementById('bg');
 const ctx = canvas.getContext('2d');
 let W, H, particles;
@@ -14,7 +20,7 @@ function initParticles() {
     vx: (Math.random() - 0.5) * 0.18,
     vy: (Math.random() - 0.5) * 0.18,
     r: Math.random() * 1.2 + 0.3,
-    alpha: Math.random() * 0.35 + 0.05,
+    alpha: Math.random() * 0.18 + 0.04,
   }));
 }
 
@@ -26,7 +32,7 @@ function drawLines() {
       const dist = Math.sqrt(dx*dx + dy*dy);
       if (dist < 140) {
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(123,110,246,${0.07 * (1 - dist/140)})`;
+        ctx.strokeStyle = `rgba(91,79,224,${0.06 * (1 - dist/140)})`;
         ctx.lineWidth = 0.5;
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
@@ -48,7 +54,7 @@ function loop() {
     if (p.y > H) p.y = 0;
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(123,110,246,${p.alpha})`;
+    ctx.fillStyle = `rgba(91,79,224,${p.alpha})`;
     ctx.fill();
   }
   requestAnimationFrame(loop);

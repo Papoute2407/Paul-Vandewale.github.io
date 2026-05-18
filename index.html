@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,41 +14,68 @@
   <nav>
     <div class="logo">// portfolio</div>
     <ul>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">About me</a></li>
-      <li><a href="#">My school</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#projets" onclick="smoothScroll('projets')">Projects</a></li>
+      <li><a href="#parcours" onclick="smoothScroll('parcours')">About me</a></li>
+      <li><a href="#my-school" onclick="smoothScroll('my-school')">My school</a></li>
+      <li><a href="#contact" onclick="smoothScroll('contact')">Contact</a></li>
     </ul>
   </nav>
 
   <div class="hero">
-    <div class="hero-tag">zone01 · promo 2025</div>
+    <div class="hero-tag">zone01 · class of 2025</div>
     <h1>Welcome to my <br><span>Full-stack developer</span><br>Portfolio</h1>
-    <p>Étudiant en première année à Zone01 Rouen. J'explore les differents type de language a travers divers projets.</p>
+    <p>First-year student at Zone01 Rouen. I explore different programming languages through various hands-on projects.</p>
     <div class="hero-cta">
-      <a href="#" class="btn-primary">Mes projets</a>
-      <a href="#" class="btn-ghost">Me contacter</a>
+      <a href="#projets" class="btn-primary" onclick="smoothScroll('projets')">My projects</a>
+      <a href="#contact" class="btn-ghost" onclick="smoothScroll('contact')">Contact me</a>
     </div>
   </div>
 
+  <!-- APPRENTICESHIP BANNER -->
+  <section id="alternance">
+    <div class="alternance-block">
+      <div class="alternance-top">
+        <div class="alternance-badge">
+          <span class="badge-dot"></span>Available for apprenticeship
+        </div>
+      </div>
+      <div class="alternance-body">
+        <div class="alternance-content">
+          <h3>Looking for an apprenticeship</h3>
+          <p>Developer student at Zone01 Rouen, I am looking for an apprenticeship starting <strong>2025</strong> to deepen my skills in full-stack development in a professional environment.</p>
+          <ul class="alternance-details">
+            <li><span class="detail-label">Degree</span>Application Developer Designer — Bachelor's level (Zone01)</li>
+            <li><span class="detail-label">Location</span>Rouen &amp; surroundings, remote possible</li>
+            <li><span class="detail-label">Stack</span>Go, HTML/CSS, JavaScript, Python, Linux</li>
+          </ul>
+        </div>
+        <div class="alternance-cta">
+          <a href="CV_Paul_Vandewalle_.pdf" download class="btn-cv">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download my resume
+          </a>
+          <a href="#contact" onclick="smoothScroll('contact')" class="btn-ghost">Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="projets">
-    <div class="section-label">projets</div>
+    <div class="section-label">projects</div>
     <div class="projects-grid">
       <div class="project-card">
-        <div class="tag">Go, HTML/CSS</div>
-        <h3>Fonctions mathématiques</h3>
-        <p>Réimplémentation de modulo, floor, ceil, round sans utiliser les méthodes natives de JS.</p>
-      </div>
-      <div class="project-card">
-        <div class="tag">HTML/CSS</div>
-        <h3>Split from scratch</h3>
-        <p>Implémentation d'un split custom avec gestion des séparateurs multi-caractères.</p>
+        <div class="tag">Forum</div>
+        <h3>First "big project"</h3>
+        <p>This was a group project of four that led us to use databases with SQLite, for example, 
+          and a lot of Go programming for the server, handlers, and their services...
+        </p>
+        <a href="https://github.com/Papoute2407/project-forum" class="contact-link" target="_blank">See the repo of the project</a>
       </div>
     </div>
   </section>
 
   <section id="competences">
-    <div class="section-label">compétences</div>
+    <div class="section-label">skills</div>
     <div class="skills-grid">
       <div class="skill-item">
         <div class="skill-name">HTML / CSS</div>
@@ -56,10 +83,10 @@
       </div>
       <div class="skill-item">
         <div class="skill-name">JavaScript</div>
-        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:10%; animation-delay:0.1s"></div></div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:25%; animation-delay:0.1s"></div></div>
       </div>
       <div class="skill-item">
-        <div class="skill-name">Algorithmique</div>
+        <div class="skill-name">Algorithms</div>
         <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:45%; animation-delay:0.2s"></div></div>
       </div>
       <div class="skill-item">
@@ -82,24 +109,35 @@
   </section>
 
   <section id="parcours">
-    <div class="section-label">parcours</div>
+    <div class="section-label">journey</div>
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-date">2025 →</div>
         <div class="timeline-line"><div class="timeline-dot"></div></div>
         <div class="timeline-content">
-          <h4>BAC générale</h4>
-          <p>Spécialités numérique et science de l'informatique / mathématiques (science ingégnerie en 3ème spécialité)</p>
+          <h4>High school diploma</h4>
+          <p>Specialisations in digital science &amp; computer science / mathematics (engineering science as a third option).</p>
         </div>
       </div>
       <div class="timeline-item">
         <div class="timeline-date">2025</div>
         <div class="timeline-line"><div class="timeline-dot"></div></div>
         <div class="timeline-content">
-          <h4>Entrée a Zone01</h4>
-          <p>Découverte du développement en autodidacte — Go, HTML, CSS, JavaScript.</p>
+          <h4>Joined Zone01</h4>
+          <p>Self-taught introduction to development — Go, HTML, CSS, JavaScript.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="my-school">
+    <div class="section-label">my school</div>
+    <div class="school-tag">
+      <p>Zone01 is a 2 to 3-year work-study program based on peer-to-peer learning (student to student, no teachers, no grades) l
+        eading to an Application Developer Designer degree at level 6 (equivalent to a Bachelor's degree). Over 3,200 hours of 
+        training, students complete 55 projects — mostly in groups — each reviewed by 5 peers, totalling 250 code audits. 
+        The program also includes 4 intensive immersion phases focused on specific languages, ultimately covering 12 different programming languages.
+      </p>
     </div>
   </section>
 
@@ -107,17 +145,18 @@
     <div class="section-label">contact</div>
     <div class="contact-block">
       <div>
-        <h3>On travaille ensemble ?</h3>
-        <p>Ouvert aux collaborations et opportunités de stage.</p>
+        <h3>Let's work together?</h3>
+        <p>Open to collaborations and internship opportunities.</p>
       </div>
       <div class="contact-links">
-        <a href="https://github.com/Papoute2407" class="contact-link">GitHub</a>
-        <a href="https://www.linkedin.com/in/paul-vandewalle-09b6993b1/" class="contact-link">LinkedIn</a>
+        <a href="https://github.com/Papoute2407" class="contact-link" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/paul-vandewalle-09b6993b1/" class="contact-link" target="_blank">LinkedIn</a>
         <a href="mailto:paul.vandewalle2407@gmail.com" class="contact-link">Email</a>
       </div>
     </div>
   </section>
 </div>
-<script>index.js</script>
+
+<script src="index.js"></script>
 </body>
 </html>
